@@ -29,7 +29,7 @@ BEGIN
        (
          MAX(headcolumn) FOR 
          COLUMNNO IN  ('+ @PIVOT_HEADER + ')
-        ) AS Y;'
+        ) AS Y ORDER BY SNO;'
      
  	EXECUTE SP_EXECUTESQL @SQL
 END
